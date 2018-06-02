@@ -3,7 +3,7 @@
 instalasi dengan command prompt :
 <h3>1. clone source dengan git</h3>
     cd C:/xampp/htdocs
-    git clone https://github.com/haeruszaman/valagoocar-user.git
+    git clone https://github.com/Haeruszaman/valagoocar-user.git
 <h3>2. install vendor dengan composer</h3>
     cd valgoocar-user
     composer config -g repo.packagist composer https://packagist.phpcomposer.com
