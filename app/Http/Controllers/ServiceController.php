@@ -90,7 +90,7 @@ class ServiceController extends RentcarController
             return (new ServiceTransformer)->transform($model);
         }else{
             $m = $this->displayerors($validator);
-            return $this->resnposejson($m, 200, false);
+            return $this->responsejson($m, 200, false);
         }
     
     }

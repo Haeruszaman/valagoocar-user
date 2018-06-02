@@ -72,7 +72,7 @@ $api->version('v1', function ($api) {
             'uses' => 'App\Http\Controllers\UsersController@show',
         ]);
 
-        $api->patch('/me/update', [
+        $api->put('/me/update', [
             'uses' => 'App\Http\Controllers\UsersController@update',
         ]);
         $api->patch('/me/update/status', [
@@ -136,9 +136,9 @@ $api->version('v1', function ($api) {
         $api->put('/service/{code}/edit', [
             'uses' => 'App\Http\Controllers\ServiceController@edit',
         ]);
-        /*$api->patch('/service/{code}/updatestatus', [
+        $api->patch('/service/{code}/updatestatus', [
             'uses' => 'App\Http\Controllers\ServiceController@updatestatus',
-        ]);*/
+        ]);
         $api->delete('/service/{code}/destroy', [
             'uses' => 'App\Http\Controllers\ServiceController@destroy',
         ]);
@@ -153,9 +153,9 @@ $api->version('v1', function ($api) {
         $api->post('/order/store', [
             'uses' => 'App\Http\Controllers\OrderController@store',
         ]);
-        $api->patch('/order/{code}/updatestatus', [
+        /*$api->patch('/order/{code}/updatestatus', [
             'uses' => 'App\Http\Controllers\OrderController@updatestatus',
-        ]);
+        ]);*/
         $api->post('/order/{code}/upload/image', [
             'uses' => 'App\Http\Controllers\OrderController@uploadImage',
         ]);
