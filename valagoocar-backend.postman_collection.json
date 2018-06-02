@@ -1,0 +1,2186 @@
+{
+	"info": {
+		"_postman_id": "7718745b-0146-48f0-b586-983abf8ebcb9",
+		"name": "valagoocar-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"description": "ValagooCar Admin",
+			"item": [
+				{
+					"name": "Master Car",
+					"description": null,
+					"item": [
+						{
+							"name": "Collection Master Car",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/car?sort=TAHUN_TERBARU",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"car"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "TAHUN_TERBARU"
+										}
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Master Car",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/car/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"car",
+										"2"
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Master Car",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Honda Jazz",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "merk",
+											"value": "Honda",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "seat",
+											"value": "6",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "loading",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2011",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/car/store",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"car",
+										"store"
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Master Car",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Honda Jazz 2017",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "merk",
+											"value": "Honda",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "seat",
+											"value": "6",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "loading",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2017",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/car/8/edit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"car",
+										"8",
+										"edit"
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Master Car",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/car/8/destroy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"car",
+										"8",
+										"destroy"
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Master City",
+					"description": "Master City",
+					"item": [
+						{
+							"name": "Collection City",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/city",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"city"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Master City",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/city/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"city",
+										"2"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Master City",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Surabaya",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/city/store",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"city",
+										"store"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Master City",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Malang",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/city/2/edit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"city",
+										"2",
+										"edit"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Master City",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/city/6/destroy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"city",
+										"6",
+										"destroy"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Service",
+					"description": null,
+					"item": [
+						{
+							"name": "Collection Service",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/service?is_active=1&sort=HARGA_TERENDAH&keyword=East Shyanne",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"service"
+									],
+									"query": [
+										{
+											"key": "is_active",
+											"value": "1"
+										},
+										{
+											"key": "sort",
+											"value": "HARGA_TERENDAH"
+										},
+										{
+											"key": "keyword",
+											"value": "East Shyanne"
+										}
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Service",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/service/S-23755",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"service",
+										"S-23755"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Service",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "vendor",
+											"value": "ilham1991",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "car",
+											"value": "Grand Livina 1.5 HWS CVT Autech",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Test Create Service",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Situbondo",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "200000",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/service/store",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"service",
+										"store"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Service",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "vendor",
+											"value": "ubaidillah",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "car",
+											"value": "aff",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "afasf",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "afaf",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "faaf",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/service/S-73761/edit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"service",
+										"S-73761",
+										"edit"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Status Service",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PATCH",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "is_active",
+											"value": "1",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/service/S-73761/updatestatus",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"service",
+										"S-73761",
+										"updatestatus"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Service",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/service/S-73761/destroy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"service",
+										"S-73761",
+										"destroy"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Order",
+					"description": null,
+					"item": [
+						{
+							"name": "Collection Order",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/order?",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"order"
+									]
+								},
+								"description": "ORDER"
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Order",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/order/O-83909",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"order",
+										"O-83909"
+									]
+								},
+								"description": "ORDER"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Status Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTc1MzgsImV4cCI6MTUyODAwMzkzOCwibmJmIjoxNTI3OTE3NTM4LCJqdGkiOiJGYkFoMDBaUDVsR3A0UjFEIn0.BR8jmqTbqzGEL5vEVz1RSTT7Vi5LaUGa6ihef6rlxqk"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "-1",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "PATCH",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-admin/public/api/order/O-83909/updatestatus",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-admin",
+										"public",
+										"api",
+										"order",
+										"O-83909",
+										"updatestatus"
+									]
+								},
+								"description": "Order"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login Valagoocar Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "Asensio@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/valagoocar-admin/public/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-admin",
+								"public",
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "RENTCAR"
+					},
+					"response": []
+				},
+				{
+					"name": "Register Valagoocar Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Marco Asensio",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Asensio20",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "082228611622",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "roles",
+									"value": "User",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Asensio@gmail.com",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/valagoocar-user/public/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-user",
+								"public",
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "RENTCAR"
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email Valagoocar Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost/valagoocar-admin/public/api/auth/verify_email/4fn0pH4uPD3Y677WzWAMAX2CvvjM56W2x3k0CjCNRp50Gz8i4S25FTUMM4CGD3RlSrLJ0xrOtGFbvJZCg9C6n1ztHosnmG3qkpyF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-admin",
+								"public",
+								"api",
+								"auth",
+								"verify_email",
+								"4fn0pH4uPD3Y677WzWAMAX2CvvjM56W2x3k0CjCNRp50Gz8i4S25FTUMM4CGD3RlSrLJ0xrOtGFbvJZCg9C6n1ztHosnmG3qkpyF"
+							]
+						},
+						"description": "USERS"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Valagoocar Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTg3NDksImV4cCI6MTUyODAwNTE0OSwibmJmIjoxNTI3OTE4NzQ5LCJqdGkiOiJ6UTdPQVhxbkhUTVZHaG9FIn0.nBMI6-y0fUFjYt38wdjkze0g88vLvblH4Py_bMgLGjg"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Haerus",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Haerus25",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " Leytonstone, London",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "England",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "02-05-1975",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/valagoocar-admin/public/api/me/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-admin",
+								"public",
+								"api",
+								"me",
+								"update"
+							]
+						},
+						"description": "USERS"
+					},
+					"response": []
+				},
+				{
+					"name": "Log Out Valagoocar Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvdmFsYWdvb2Nhci1hZG1pbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTg3NDksImV4cCI6MTUyODAwNTE0OSwibmJmIjoxNTI3OTE4NzQ5LCJqdGkiOiJ6UTdPQVhxbkhUTVZHaG9FIn0.nBMI6-y0fUFjYt38wdjkze0g88vLvblH4Py_bMgLGjg"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost/valagoocar-admin/public/api/me/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-admin",
+								"public",
+								"api",
+								"me",
+								"logout"
+							]
+						},
+						"description": "USERS"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "ValagooCar User",
+			"item": [
+				{
+					"name": "Master Car",
+					"description": null,
+					"item": [
+						{
+							"name": "Collection Master Car",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/car?sort=TAHUN_TERBARU",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"car"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "TAHUN_TERBARU"
+										}
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Master Car",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/car/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"car",
+										"2"
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Master Car",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Honda Jazz",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "merk",
+											"value": "Honda",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "seat",
+											"value": "6",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "loading",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2011",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/car/store",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"car",
+										"store"
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Master Car",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Honda Jazz 2017",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "merk",
+											"value": "Honda",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "seat",
+											"value": "6",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "loading",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2017",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/car/7/edit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"car",
+										"7",
+										"edit"
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Master Car",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/car/7/destroy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"car",
+										"7",
+										"destroy"
+									]
+								},
+								"description": "MASTER CAR"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Master City",
+					"description": "Master City",
+					"item": [
+						{
+							"name": "Collection City",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/city",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"city"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Master City",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/city/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"city",
+										"2"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Master City",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Jakarta",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/city/store",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"city",
+										"store"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Master City",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Yogyakarta",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/city/1/edit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"city",
+										"1",
+										"edit"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Master City",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/city/5/destroy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"city",
+										"5",
+										"destroy"
+									]
+								},
+								"description": "Master City"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Service",
+					"description": null,
+					"item": [
+						{
+							"name": "Collection Service",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTUzODIsImV4cCI6MTUyODAwMTc4MiwibmJmIjoxNTI3OTE1MzgyLCJqdGkiOiJiNEZkdGdoV2NYSExVcDd0In0.pnndYJy05jNzak4jnEazVLhUfueHtiqrj-0WeDngvi4"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/service?is_active=1&sort=HARGA_TERENDAH&keyword=East Shyanne",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"service"
+									],
+									"query": [
+										{
+											"key": "is_active",
+											"value": "1"
+										},
+										{
+											"key": "sort",
+											"value": "HARGA_TERENDAH"
+										},
+										{
+											"key": "keyword",
+											"value": "East Shyanne"
+										}
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Service",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTUzODIsImV4cCI6MTUyODAwMTc4MiwibmJmIjoxNTI3OTE1MzgyLCJqdGkiOiJiNEZkdGdoV2NYSExVcDd0In0.pnndYJy05jNzak4jnEazVLhUfueHtiqrj-0WeDngvi4"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/service/S-23755",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"service",
+										"S-23755"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Service",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTUzODIsImV4cCI6MTUyODAwMTc4MiwibmJmIjoxNTI3OTE1MzgyLCJqdGkiOiJiNEZkdGdoV2NYSExVcDd0In0.pnndYJy05jNzak4jnEazVLhUfueHtiqrj-0WeDngvi4"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "vendor",
+											"value": "ilham1991",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "car",
+											"value": "Grand Livina 1.5 HWS CVT Autech",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Test Create Service",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Situbondo",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "200000",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/service/store",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"service",
+										"store"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Service",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "vendor",
+											"value": "ilham1991",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "car",
+											"value": "Grand Livina 1.5 HWS CVT Autech",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Edit Service",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Situbondo",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "2700000",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/service/S-50853/edit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"service",
+										"S-50853",
+										"edit"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Status Service",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PATCH",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "is_active",
+											"value": "1",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/service/S-50853/updatestatus",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"service",
+										"S-50853",
+										"updatestatus"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Service",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTU2OTQsImV4cCI6MTUyODAwMjA5NCwibmJmIjoxNTI3OTE1Njk0LCJqdGkiOiJNWXJzRGhlUzlYYUFNajlDIn0.Gss0aDNsKmSSN0yjj_LtWebuAqvKYneXfGJ5Dn7qFuQ"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/service/S-14650/destroy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"service",
+										"S-14650",
+										"destroy"
+									]
+								},
+								"description": "SERVICE"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Order",
+					"description": null,
+					"item": [
+						{
+							"name": "Collection Order",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc4NDQyODYsImV4cCI6MTUyNzkzMDY4NiwibmJmIjoxNTI3ODQ0Mjg2LCJqdGkiOiJKUzlIa2NRaWlxaWUzZVB3In0.7NV6wkEN7gV-YNx1dtLRv2OkqLX1HeA95F-z0YE7S4Q"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/order?filter_status=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"order"
+									],
+									"query": [
+										{
+											"key": "filter_status",
+											"value": "2"
+										}
+									]
+								},
+								"description": "Order"
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Order",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc4NDQyODYsImV4cCI6MTUyNzkzMDY4NiwibmJmIjoxNTI3ODQ0Mjg2LCJqdGkiOiJKUzlIa2NRaWlxaWUzZVB3In0.7NV6wkEN7gV-YNx1dtLRv2OkqLX1HeA95F-z0YE7S4Q"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/order/O-83909",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"order",
+										"O-83909"
+									]
+								},
+								"description": "Order"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc4NDQyODYsImV4cCI6MTUyNzkzMDY4NiwibmJmIjoxNTI3ODQ0Mjg2LCJqdGkiOiJKUzlIa2NRaWlxaWUzZVB3In0.7NV6wkEN7gV-YNx1dtLRv2OkqLX1HeA95F-z0YE7S4Q"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "service_code",
+											"value": "S-30847",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "order_date",
+											"value": "10-01-2019",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "order_time",
+											"value": "06:00:00",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "days",
+											"value": "3",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "address_order",
+											"value": "Jakarta",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Tour Surabaya",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/order/store",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"order",
+										"store"
+									]
+								},
+								"description": "Order"
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Bukti Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc4NDQyODYsImV4cCI6MTUyNzkzMDY4NiwibmJmIjoxNTI3ODQ0Mjg2LCJqdGkiOiJKUzlIa2NRaWlxaWUzZVB3In0.7NV6wkEN7gV-YNx1dtLRv2OkqLX1HeA95F-z0YE7S4Q"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"description": "",
+											"type": "file"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/valagoocar-user/public/api/order/O-9502/upload/image",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"valagoocar-user",
+										"public",
+										"api",
+										"order",
+										"O-9502",
+										"upload",
+										"image"
+									]
+								},
+								"description": "Order"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login Valagoocar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "Kroos@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/valagoocar-user/public/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-user",
+								"public",
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "RENTCAR"
+					},
+					"response": []
+				},
+				{
+					"name": "Register Valagoocar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Toni Kroos",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Kross08",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "082228611621",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "roles",
+									"value": "User",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Kroos@gmail.com",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/valagoocar-user/public/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-user",
+								"public",
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "RENTCAR"
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email Valagoocar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost/valagoocar-admin/public/api/auth/verify_email/4fn0pH4uPD3Y677WzWAMAX2CvvjM56W2x3k0CjCNRp50Gz8i4S25FTUMM4CGD3RlSrLJ0xrOtGFbvJZCg9C6n1ztHosnmG3qkpyF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-admin",
+								"public",
+								"api",
+								"auth",
+								"verify_email",
+								"4fn0pH4uPD3Y677WzWAMAX2CvvjM56W2x3k0CjCNRp50Gz8i4S25FTUMM4CGD3RlSrLJ0xrOtGFbvJZCg9C6n1ztHosnmG3qkpyF"
+							]
+						},
+						"description": "USERS"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Valagoocar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTg5OTcsImV4cCI6MTUyODAwNTM5NywibmJmIjoxNTI3OTE4OTk3LCJqdGkiOiJQUEE0QnlIR2dwVzFNYzlOIn0.7RMdt6XbCkGm29x1hp2RWBuOkC9s1DXA-Xq6p5a-kc4"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Beckham",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "David07",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " Leytonstone, London",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "England",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "02-05-1975",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/valagoocar-user/public/api/me/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-user",
+								"public",
+								"api",
+								"me",
+								"update"
+							]
+						},
+						"description": "USERS"
+					},
+					"response": []
+				},
+				{
+					"name": "Log Out Valagoocar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0L3ZhbGFnb29jYXItdXNlci9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1Mjc5MTg5OTcsImV4cCI6MTUyODAwNTM5NywibmJmIjoxNTI3OTE4OTk3LCJqdGkiOiJQUEE0QnlIR2dwVzFNYzlOIn0.7RMdt6XbCkGm29x1hp2RWBuOkC9s1DXA-Xq6p5a-kc4"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost/valagoocar-user/public/api/me/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"valagoocar-user",
+								"public",
+								"api",
+								"me",
+								"logout"
+							]
+						},
+						"description": "USERS"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
