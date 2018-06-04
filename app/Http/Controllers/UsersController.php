@@ -270,7 +270,7 @@ class UsersController extends RentcarController
             $user = Users::where('email', $r->input('email'))->first();
             //1. mengirim Email ke usernya.
             $email  = $r->input('email');
-            $subject = 'Confirm '.$r->input('email').' on Itanik';
+            $subject = 'Confirm '.$r->input('email').' on Rentcar';
             $compose_email = "https://localhost/lumen-jwt/public/api/auth/forgot_password/".$user->secretcode."";
             $this->sendEmail($email, $subject, $compose_email);
 
@@ -443,7 +443,7 @@ class UsersController extends RentcarController
             $user = Users::where('username', $r->input('username'))->first();
             //1. mengirim Email ke usernya.
             $email  = $user->email;
-            $subject = 'Confirm '.$user->email.' on Itanik';
+            $subject = 'Confirm '.$user->email.' on Rentcar';
             $compose_email = "https://localhost/lumen-jwt/public/api/auth/verify_email/".$user->secretcode."";
             $this->sendEmail($email, $subject, $compose_email);
 
