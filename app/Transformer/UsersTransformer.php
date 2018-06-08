@@ -26,7 +26,7 @@ class UsersTransformer extends TransformerAbstract
             ],
             'age'       => [
                 'birthday' => date('d-m-Y', strtotime($Users->birthday)),
-                'count' => 20,
+                'count' => '',
             ],
             'gender'         => $Users->gender,
             'status' 		 => [

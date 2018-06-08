@@ -14,4 +14,14 @@ class Service extends Model {
         return $this->hasOne('App\Models\Users', 'username', 'vendor');
     }
 
+    public function cityOne()
+    {
+        return $this->hasOne('App\Models\M_city', 'name', 'city');
+    }
+
+    public function carOne()
+    {
+        return $this->hasOne('App\Models\M_car', 'name', 'car');
+    }
+
 }

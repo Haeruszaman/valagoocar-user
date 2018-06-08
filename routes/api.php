@@ -81,7 +81,6 @@ $api->version('v1', function ($api) {
         $api->patch('/me/changepassword', [
             'uses' => 'App\Http\Controllers\UsersController@change_password',
         ]);
-
         $api->post('/me/logout', [
             'uses' => 'App\Http\Controllers\UsersController@logout',
         ]);
@@ -96,15 +95,6 @@ $api->version('v1', function ($api) {
         $api->get('/car/{id}', [
             'uses' => 'App\Http\Controllers\M_carController@show',
         ]);
-        $api->post('/car/store', [
-            'uses' => 'App\Http\Controllers\M_carController@store',
-        ]);
-        $api->put('/car/{id}/edit', [
-            'uses' => 'App\Http\Controllers\M_carController@edit',
-        ]);
-        $api->delete('/car/{id}/destroy', [
-            'uses' => 'App\Http\Controllers\M_carController@destroy',
-        ]);
 
 //MASTER CITY
         $api->get('/city', [
@@ -113,15 +103,6 @@ $api->version('v1', function ($api) {
         $api->get('/city/{id}', [
             'uses' => 'App\Http\Controllers\M_cityController@show',
         ]);
-        $api->post('/city/store', [
-            'uses' => 'App\Http\Controllers\M_cityController@store',
-        ]);
-        $api->put('/city/{id}/edit', [
-            'uses' => 'App\Http\Controllers\M_cityController@edit',
-        ]);
-        $api->delete('/city/{id}/destroy', [
-            'uses' => 'App\Http\Controllers\M_cityController@destroy',
-        ]);
 
 //SERVICE
         $api->get('/service', [
@@ -129,18 +110,6 @@ $api->version('v1', function ($api) {
         ]);
         $api->get('/service/{code}', [
             'uses' => 'App\Http\Controllers\ServiceController@show',
-        ]);
-        $api->post('/service/store', [
-            'uses' => 'App\Http\Controllers\ServiceController@store',
-        ]);
-        $api->put('/service/{code}/edit', [
-            'uses' => 'App\Http\Controllers\ServiceController@edit',
-        ]);
-        $api->patch('/service/{code}/updatestatus', [
-            'uses' => 'App\Http\Controllers\ServiceController@updatestatus',
-        ]);
-        $api->delete('/service/{code}/destroy', [
-            'uses' => 'App\Http\Controllers\ServiceController@destroy',
         ]);
 
 //ORDER
@@ -153,9 +122,6 @@ $api->version('v1', function ($api) {
         $api->post('/order/store', [
             'uses' => 'App\Http\Controllers\OrderController@store',
         ]);
-        /*$api->patch('/order/{code}/updatestatus', [
-            'uses' => 'App\Http\Controllers\OrderController@updatestatus',
-        ]);*/
         $api->post('/order/{code}/upload/image', [
             'uses' => 'App\Http\Controllers\OrderController@uploadImage',
         ]);

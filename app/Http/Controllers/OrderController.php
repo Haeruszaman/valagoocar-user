@@ -25,6 +25,7 @@ class OrderController extends RentcarController
     {
         
         $model = new Order;
+        $model = $model->where('user', Auth::user()->username);
 
         $queries = [];
 
@@ -158,46 +159,6 @@ class OrderController extends RentcarController
         return response()->json($ket);
     
     }
-
-    /*public function updatestatus(Request $r, $code)
-    {
-        $input = $r->only([
-            'status',
-        ]);
-
-        $validator = Validator::make($input,[
-            'status'      => 'required|numeric',
-        ]);
-    
-        // validasi proses bisnis
-        $input['code'] = $code;
-        $validator->setData($input);
-        $validator->after(function($validator) use ($input) {
-            //validasi 1. pengecekan data
-            $order_count = Order::where('code',  $input['code'])->count(); 
-            if ($order_count == 0) {
-                $validator->errors()->add('code', 'Code Yang Anda Inputkan Salah Atau Datanya Tidak Ditemukan');
-            }
-        });
-
-        // END VALIDATION
-        if( $validator->fails() == false ){
-            $model = Order::where('code', $code)->firstOrFail();
-            $model->status  =  $r->input('status');
-            
-            if($model->save() == true){
-                $ket = $this->responsejson('Berhasil Tersimpan', 200, true, $model->code);
-            }else{
-                $ket = $this->responsejson('Tidak Berhasil Tersimpan', 200, false);
-            }
-
-        }else{
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-        } 
-
-        return response()->json($ket);
-    }*/
 
     public function uploadImage(Request $request, $code)
     {

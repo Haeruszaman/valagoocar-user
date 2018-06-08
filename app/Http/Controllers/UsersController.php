@@ -455,7 +455,7 @@ class UsersController extends RentcarController
             $m = $this->displayerors($validator);
             $ket = $this->responsejson($m, 200, false);
 
-        }  
+        }
 
         return response()->json($ket);
 
