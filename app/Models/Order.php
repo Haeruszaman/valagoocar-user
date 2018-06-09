@@ -8,6 +8,22 @@ class Order extends Model {
 
     protected $table = 'order';
     public $timestamps = false;
+    protected $fillable = [
+        'code', 
+        'service_code', 
+        'image', 
+        'user', 
+        'order_date', 
+        'order_time', 
+        'days', 
+        'end_date', 
+        'address_order', 
+        'city', 
+        'car', 
+        'description', 
+        'price_total', 
+        'status'
+    ];
 
     public function userOne()
     {

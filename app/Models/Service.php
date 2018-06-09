@@ -8,6 +8,15 @@ class Service extends Model {
 
     protected $table = 'service';
     public $timestamps = false;
+    protected $fillable = [
+        'code', 
+        'vendor', 
+        'car', 
+        'description', 
+        'city', 
+        'price', 
+        'is_active', 
+    ];
 
     public function userOne()
     {

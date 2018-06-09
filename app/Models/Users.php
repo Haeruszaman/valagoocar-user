@@ -8,6 +8,24 @@ class Users extends Model {
 
     protected $table = 'users';
     public $timestamps = false;
+    protected $fillable = [
+        'register_time', 
+        'pin', 
+        'image', 
+        'username', 
+        'name', 
+        'city', 
+        'address', 
+        'email', 
+        'password', 
+        'phone', 
+        'birthday', 
+        'gender', 
+        'status', 
+        'roles',
+        'secretcode',
+        'remember_token'
+    ];
 
     public function rolesOne()
     {

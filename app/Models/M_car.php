@@ -8,6 +8,7 @@ class M_car extends Model {
 
     protected $table = 'm_car';
     public $timestamps = false;
+    protected $fillable = ['name', 'merk', 'seat', 'loading', 'year'];
 
     public function merkOne()
     {
