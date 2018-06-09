@@ -90,7 +90,7 @@ class M_carController extends RentcarController
             return (new M_carTransformer)->transform($model);
         }else{
             $m = $this->displayerors($validator);
-            return $this->responsejson($m, 200, false);
+            return response()->json(['errors' => $validator->errors()], 422);
         }
     
     }
