@@ -24,7 +24,7 @@ class ServiceController extends RentcarController
     {
         
         $model = new Service;
-
+        $model = $model->where('vendor', Auth::user()->username);
         $queries = [];
 
         $columns_filter = ['is_active' => "is_active"];

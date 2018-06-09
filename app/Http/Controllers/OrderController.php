@@ -26,7 +26,6 @@ class OrderController extends RentcarController
         
         $model = new Order;
         $model = $model->where('user', Auth::user()->username);
-
         $queries = [];
 
         $columns_filter = ['filter_status' => "status"];

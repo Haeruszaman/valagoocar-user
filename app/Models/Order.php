@@ -19,9 +19,4 @@ class Order extends Model {
         return $this->hasOne('App\Models\Service', 'code', 'service_code');
     }
 
-    public function carOne()
-    {
-        return $this->hasOne('App\Models\M_car', 'name', 'car');
-    }
-
 }

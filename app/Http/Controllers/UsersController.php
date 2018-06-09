@@ -551,7 +551,6 @@ class UsersController extends RentcarController
             $user->register_time = date('Y-m-d H:i:s');
             $user->status = 0;
             $user->secretcode = $this->generatedSecretcode();
-            $user->image = 'http://192.168.1.4/valagoo-user/public/image/rentcar.jpg';
             $user->pin = rand(1000,9999);
 
             if($user->save() == true)

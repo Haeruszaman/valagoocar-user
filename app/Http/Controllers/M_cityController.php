@@ -24,18 +24,6 @@ class M_cityController extends RentcarController
     {
         
         $model = new M_city;
-
-        $queries = [];
-
-        /*$columns_filter = ['filter_merk' => "merk"];
-
-        // FILTER
-        foreach ($columns_filter as $key => $column) {
-            if ($request->has($key)) {
-                $model = $model->where($column, $request->$key);
-                $queries[$key] = $request->$key;
-            }
-        }*/
         
         // SEARCHING
         if ($request->has('keyword') == true) {
@@ -43,19 +31,9 @@ class M_cityController extends RentcarController
             $model = $model->Where("name", "like","%{$request->input('keyword')}%");
             $queries['keyword'] = $request->keyword;
         }
-
-        // SORTING
-        /*if ($request->has('sort') == true) {
-            if ($request->input('sort') == 'TAHUN_TERBARU' ) {
-                $model = $model->orderBy('year', 'DESC');
-            }elseif ($request->input('sort') == 'TAHUN_TERLAMA' ) {
-                $model = $model->orderBy('year', 'ASC');
-            }
-            $queries['sort'] = $request->sort;
-        }*/
         
         // PAGING
-        $result = $model->paginate(10)->appends($queries);
+        $result = $model->paginate(10);
  
         return $this->response->paginator($result, new M_cityTransformer);
         

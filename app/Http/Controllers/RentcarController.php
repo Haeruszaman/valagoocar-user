@@ -61,6 +61,8 @@ class RentcarController extends Controller
             $status_code = 412;
         }elseif ($status_code == 'Unsupported Media Type') {
             $status_code = 415;
+        }elseif ($status_code == 'Unprocessable Entity') {
+            $status_code = 422;
         }elseif ($status_code == 'Internal Server Error') {
             $status_code = 500;
         }elseif ($status_code == 'Not Implemented') {
