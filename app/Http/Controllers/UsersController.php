@@ -64,8 +64,7 @@ class UsersController extends RentcarController
             $model = Users::where('username', $username)->firstOrFail();
             return (new UsersTransformer)->transform($model);
         }else{
-            $m = $this->displayerors($validator);
-            return $this->responsejson($m, 200, false);
+            return response()->json(['errors' => $validator->errors()], 422);
         }
     }
 
@@ -122,10 +121,7 @@ class UsersController extends RentcarController
             }
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         }  
 
         return response()->json($ket);
@@ -150,11 +146,7 @@ class UsersController extends RentcarController
         // validasi proses bisnis
         $validator->setData($input);
         $validator->after(function($validator) use ($input) {
-            // validasi 1. yang bisa melakukan update hanya yang login
-            /*$user = Auth::user();
-            if ($user->password != Hash::make($input['password'])) {
-                $validator->errors()->add('password', 'Password Yang Anda Inputkan Salah<br>Database : '.$user->password."<br>Inputan : ".$input['password']." --> ".Hash::make($input['password']));
-            }*/
+            
         });
 
         if( $validator->fails() == false ){
@@ -174,10 +166,7 @@ class UsersController extends RentcarController
             }
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         }  
 
         return response()->json($ket);
@@ -230,10 +219,7 @@ class UsersController extends RentcarController
             $ket = $this->responsejson('SMS Berhasil Terkirim', 200, true, $user->username);
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         }  
 
         return response()->json($ket);
@@ -277,10 +263,7 @@ class UsersController extends RentcarController
             $ket = $this->responsejson('Email Berhasil Terkirim', 200, true, $user->username);
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         }  
 
         return response()->json($ket);
@@ -303,7 +286,6 @@ class UsersController extends RentcarController
             'repeat_password' => 'required|min:6|max:50|same:password',
 
         ]);
-        
 
         // validasi proses bisnis
         $validator->setData($input);
@@ -326,10 +308,7 @@ class UsersController extends RentcarController
             $ket = $this->responsejson('Password Anda Telah Di Ubah', 200, true, $user->username);
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         } 
 
         return response()->json($ket);
@@ -370,10 +349,7 @@ class UsersController extends RentcarController
             $ket = $this->responsejson('SMS Berhasil Terkirim', 200, true, $user->username);
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         }  
 
         return response()->json($ket);
@@ -416,10 +392,7 @@ class UsersController extends RentcarController
             $ket = $this->responsejson('User Berhasil Terverifikasi', 200, true, $user->username);
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         } 
 
         return response()->json($ket);
@@ -451,10 +424,7 @@ class UsersController extends RentcarController
             $ket = $this->responsejson('Email Berhasil Terkirim', 200, true, $user->username);
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         }
 
         return response()->json($ket);
@@ -496,10 +466,7 @@ class UsersController extends RentcarController
             $ket = $this->responsejson('User Berhasil Terverifikasi', 200, true, $user->username);
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         } 
 
         return response()->json($ket);
@@ -565,10 +532,7 @@ class UsersController extends RentcarController
             }
 
         }else{
-
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-
+            return response()->json(['errors' => $validator->errors()], 422);
         } 
 
         return response()->json($ket);
@@ -616,8 +580,7 @@ class UsersController extends RentcarController
                 $ket = $this->responsejson('Image Gagal Di Upload', 200, false);
             }
         }else{
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
+            return response()->json(['errors' => $validator->errors()], 422);
         }
 
         return response()->json($ket);
