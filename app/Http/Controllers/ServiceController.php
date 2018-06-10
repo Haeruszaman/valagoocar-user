@@ -89,8 +89,7 @@ class ServiceController extends RentcarController
             $model = Service::where('code', $code)->first();
             return (new ServiceTransformer)->transform($model);
         }else{
-            $m = $this->displayerors($validator);
-            return $this->responsejson($m, 200, false);
+            return response()->json(['errors' => $validator->errors()], 422);
         }
     
     }
