@@ -97,64 +97,6 @@ class AuthController extends Controller
         return $request->only('email', 'password');
     }
 
-    /*public function Login(Request $request)
-    {
-
-        $input = $request->only([
-
-            'email',
-            'password',
-
-        ]);
-
-        $validator = Validator::make($input,[
-                
-            'email' => 'required|email',
-            'password' => 'required',
-
-        ]);
-
-        // validasi proses bisnis
-        $validator->setData($input);
-        $validator->after(function($validator) use ($input) {
-            // validasi 1. pengecekan data emailnya
-            /*$user_count = Admin::where('phone',  $input['phone'])->count();
-            if ($user_count == 0) {
-                $validator->errors()->add('phone', 'Nomor Telepon Yang Anda Inputkan Salah Atau Belum Terdaftar');
-            }else{
-                $user = Admin::where('phone', $input['phone'])->first();
-                if ($user->status == 0) {
-                    $validator->errors()->add('status', 'Anda Tidak Bisa Login Karena User Tersebut Belum Aktif, Silahkan Konfirmasi Ke Email Anda');
-                }
-            }
-        });
-        
-        if( $validator->fails() == false ){
-            
-            try {
-                
-                // Attempt to verify the credentials and create a token for the user
-                if (!$token = JWTAuth::attempt(
-                    $this->getCredentials($request)
-                )) {
-                    return $this->onUnauthorized();
-                }
-            } catch (JWTException $e) {
-                // Something went wrong whilst attempting to encode the token
-                return $this->onJwtGenerationError();
-            }  
-    
-            // All good so return the token
-            return $this->onAuthorized($token);
-
-        }else{
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
-            return response()->json($ket);
-        } 
-
-    }*/
-
     /**
      * What response should be returned on invalid credentials.
      *
