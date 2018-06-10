@@ -89,7 +89,6 @@ class M_carController extends RentcarController
             $model = M_car::findOrFail($id);
             return (new M_carTransformer)->transform($model);
         }else{
-            $m = $this->displayerors($validator);
             return response()->json(['errors' => $validator->errors()], 422);
         }
     
