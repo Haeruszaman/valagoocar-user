@@ -65,8 +65,7 @@ class M_cityController extends RentcarController
             $model = M_city::findOrFail($id);
             return (new M_cityTransformer)->transform($model);
         }else{
-            $m = $this->displayerors($validator);
-            return $this->responsejson($m, 200, false);
+            return response()->json(['errors' => $validator->errors()], 422);
         }
     
     }
