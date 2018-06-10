@@ -90,8 +90,7 @@ class OrderController extends RentcarController
             $model = Order::where('code', $code)->first();
             return (new OrderTransformer)->transform($model);
         }else{
-            $m = $this->displayerors($validator);
-            return $this->responsejson($m, 200, false);
+            return response()->json(['errors' => $validator->errors()], 422);
         }
     
     }
@@ -151,8 +150,7 @@ class OrderController extends RentcarController
             }
 
         }else{
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
+            return response()->json(['errors' => $validator->errors()], 422);
         }
 
         return response()->json($ket);
@@ -197,8 +195,7 @@ class OrderController extends RentcarController
                 $ket = $this->responsejson('Image Gagal Di Upload', 200, false);
             }
         }else{
-            $m = $this->displayerors($validator);
-            $ket = $this->responsejson($m, 200, false);
+            return response()->json(['errors' => $validator->errors()], 422);
         }
 
         return response()->json($ket);
