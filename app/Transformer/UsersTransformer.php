@@ -6,6 +6,16 @@ use League\Fractal\TransformerAbstract;
 class UsersTransformer extends TransformerAbstract
 {
     public function transform(Users $Users) {
+        //date in mm/dd/yyyy format; or it can be in other formats as well
+        $birthDate = date('d-m-Y', strtotime($Users->birthday));
+        //dd(date("dm"));
+        //explode the date to get month, day and year
+        $birthDate = explode("-", $birthDate);
+        //get age from date or birthdate
+        $age = (date("dm", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("dm")
+            ? ((date("Y") - $birthDate[2]) - 1)
+            : (date("Y") - $birthDate[2]));
+
         $status = "";
         if($Users->status == 0) $status = "PENDING";
         else if($Users->status == -1) $status = "BANNED";
@@ -26,7 +36,7 @@ class UsersTransformer extends TransformerAbstract
             ],
             'age'       => [
                 'birthday' => date('d-m-Y', strtotime($Users->birthday)),
-                'count' => '',
+                'count' => $age,
             ],
             'gender'         => $Users->gender,
             'status' 		 => [
